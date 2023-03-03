@@ -4,7 +4,7 @@
 [![Run tests](https://github.com/Treblle/treblle-sdk-core/actions/workflows/tests.yml/badge.svg)](https://github.com/Treblle/treblle-sdk-core/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/treblle/treblle-sdk-core)](https://packagist.org/packages/treblle/treblle-sdk-core)
 [![Static Analysis](https://github.com/Treblle/treblle-sdk-core/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/Treblle/treblle-sdk-core/actions/workflows/static-analysis.yml)
-[![MIT Licence](https://img.shields.io/packagist/l/treblle/treblle-sdk-core)](LICENSE.md)
+[![MIT Licence](https://img.shields.io/packagist/l/treblle/treblle-sdk-core)](https://github.com/Treblle/treblle-sdk-core/blob/main/LICENCE.md)
 
 Treblle makes it super easy to understand what’s going on with your APIs and the apps that use them. Just by adding
 Treblle to your API out of the box you get:
