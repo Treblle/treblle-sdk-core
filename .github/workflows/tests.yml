@@ -20,8 +20,8 @@ jobs:
             extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
             coverage: none
 
-      -   name: Cache yarn dependencies
-          uses: actions/cache@v2
+      -   name: Cache dependencies
+          uses: actions/cache@v3
           with:
             path: vendor
             key: composer-${{ hashFiles('composer.lock') }}
