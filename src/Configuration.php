@@ -23,7 +23,7 @@ final class Configuration
     /**
      * @return array<string,string|array<int,string>>
      */
-    public function __toArray(): array
+    public function toArray(): array
     {
         return [
             'api_key' => $this->apiKey,
