@@ -8,6 +8,7 @@ use Treblle\Core\DataObjects\OS;
 use Treblle\Core\DataObjects\Request;
 use Treblle\Core\DataObjects\Response;
 use Treblle\Core\DataObjects\Server;
+use Treblle\Core\Http\Method;
 
 it('can cast an object to an array', function (string $string): void {
     $data = new Data(
@@ -35,7 +36,7 @@ it('can cast an object to an array', function (string $string): void {
             ip: $string,
             url: $string,
             user_agent: $string,
-            method: $string,
+            method: Method::GET,
             headers: [
                 $string => $string,
             ],
@@ -101,7 +102,7 @@ it('can serialize an object to an array', function (string $string): void {
             ip: $string,
             url: $string,
             user_agent: $string,
-            method: $string,
+            method: Method::GET,
             headers: [
                 $string => $string,
             ],
@@ -167,7 +168,7 @@ it('can map the object to the correct array format', function (string $string): 
             ip: $string,
             url: $string,
             user_agent: $string,
-            method: $string,
+            method: Method::GET,
             headers: [
                 $string => $string,
             ],
@@ -227,7 +228,7 @@ it('can map the object to the correct array format', function (string $string): 
             'ip' => $string,
             'url' => $string,
             'user_agent' => $string,
-            'method' => $string,
+            'method' => Method::GET->value,
             'headers' => [
                 $string => $string,
             ],

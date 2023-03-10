@@ -8,5 +8,5 @@ use Treblle\Core\Configuration;
 
 interface ShutdownHandlerContract
 {
-    public function handle(string $payload, Configuration $configuration): void;
+    public function handle(array $payload, Configuration $configuration): mixed;
 }

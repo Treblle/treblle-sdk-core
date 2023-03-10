@@ -24,8 +24,8 @@ final class Treblle
         private readonly LanguageContract $language,
         private readonly RequestContract $request,
         private readonly ResponseContract $response,
-        private readonly ErrorContract $error,
-        private readonly ShutdownHandlerContract $handler,
+        public readonly ErrorContract $error,
+        public ShutdownHandlerContract $handler,
         private readonly bool $debug = false,
     ) {
     }
@@ -44,62 +44,41 @@ final class Treblle
      * @return array
      * @throws Throwable
      */
-    private function buildPayload(): array
+    public function buildPayload(): array
     {
-        try {
-            return [
-                'api_key' => $this->configuration->apiKey,
-                'project_id' => $this->configuration->projectId,
-                'version' => $this->version(),
-                'sdk' => $this->name(),
-                'data' => new Data(
-                    server: $this->server->get(),
-                    language: $this->language->get(),
-                    request: $this->request->get(),
-                    response: $this->response->get(),
-                    errors: $this->error->get()
-                ),
-            ];
-        } catch (Throwable $exception) {
-            if ($this->debug) {
-                throw $exception;
-            }
-        }
-
-        return [];
+        return [
+            'api_key' => $this->configuration->apiKey,
+            'project_id' => $this->configuration->projectId,
+            'version' => $this->version(),
+            'sdk' => $this->name(),
+            'data' => new Data(
+                server: $this->server->get(),
+                language: $this->language->get(),
+                request: $this->request->get(),
+                response: $this->response->get(),
+                errors: $this->error->get()
+            ),
+        ];
     }
 
     /**
-     * @return void
+     * @return mixed
      * @throws Throwable
      * @throws JsonException
      */
-    public function onShutdown(): void
+    public function onShutdown(): mixed
     {
-        // build payload
         try {
-            $payload = json_encode(
-                value: $this->buildPayload(),
-                flags: JSON_THROW_ON_ERROR,
-            );
-        } catch (Throwable $exception) {
-            if ($this->debug) {
-                throw $exception;
-            }
-
-            $payload = [];
-        }
-
-        // send payload
-        try {
-            $this->handler->handle(
-                payload: $payload,
+            return  $this->handler->handle(
+                payload: $this->buildPayload(),
                 configuration: $this->configuration,
             );
         } catch (Throwable $exception) {
             if ($this->debug) {
                 throw $exception;
             }
+
+            return null;
         }
     }
 

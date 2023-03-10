@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Treblle\Core\DataObjects\Request;
+use Treblle\Core\Http\Method;
 
 it('can cast an object to an array', function (string $string): void {
     $request = new Request(
@@ -10,7 +11,7 @@ it('can cast an object to an array', function (string $string): void {
         ip: $string,
         url: $string,
         user_agent: $string,
-        method: $string,
+        method: Method::DELETE,
         headers: [
             $string => $string,
         ],
@@ -35,7 +36,7 @@ it('can serialize an object to an array', function (string $string): void {
         ip: $string,
         url: $string,
         user_agent: $string,
-        method: $string,
+        method: Method::GET,
         headers: [
             $string => $string,
         ],
@@ -60,7 +61,7 @@ it('can map the object to the correct array format', function (string $string): 
         ip: $string,
         url: $string,
         user_agent: $string,
-        method: $string,
+        method: Method::GET,
         headers: [
             $string => $string,
         ],
@@ -79,7 +80,7 @@ it('can map the object to the correct array format', function (string $string): 
         'ip' => $string,
         'url' => $string,
         'user_agent' => $string,
-        'method' => $string,
+        'method' => Method::GET->value,
         'headers' => [
             $string => $string,
         ],
