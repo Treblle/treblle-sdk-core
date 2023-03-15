@@ -19,11 +19,11 @@ final class Response implements TreblleObject
      * @param array<int|string,mixed> $body The complete JSON respinse returned by the server.
      */
     public function __construct(
-        public readonly array $headers,
-        public readonly null|int $code,
-        public readonly null|int $size,
-        public readonly null|float $load_time,
-        public readonly array $body,
+        public array $headers,
+        public null|int $code,
+        public null|int $size,
+        public null|float $load_time,
+        public array $body,
     ) {
     }
 

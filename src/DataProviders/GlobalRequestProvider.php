@@ -14,7 +14,7 @@ use Treblle\Core\Http\Method;
 final class GlobalRequestProvider implements RequestContract
 {
     public function __construct(
-        private readonly MaskingContract $masker,
+        private MaskingContract $masker,
     ) {
     }
 

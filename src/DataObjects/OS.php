@@ -17,9 +17,9 @@ final class OS implements TreblleObject
      * @param string|null $architecture The server architecture.
      */
     public function __construct(
-        public readonly null|string $name,
-        public readonly null|string $release,
-        public readonly null|string $architecture,
+        public null|string $name,
+        public null|string $release,
+        public null|string $architecture,
     ) {
     }
 

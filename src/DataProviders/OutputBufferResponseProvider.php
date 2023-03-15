@@ -15,8 +15,8 @@ use Treblle\Core\DataObjects\Response;
 final class OutputBufferResponseProvider implements ResponseContract
 {
     public function __construct(
-        private readonly ErrorContract $error,
-        private readonly MaskingContract $masker,
+        private ErrorContract $error,
+        private MaskingContract $masker,
     ) {
         if (ob_get_level() < 1) {
             throw new RuntimeException(

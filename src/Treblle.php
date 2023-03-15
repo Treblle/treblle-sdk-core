@@ -19,14 +19,14 @@ use Treblle\Core\Support\ErrorType;
 final class Treblle
 {
     public function __construct(
-        private readonly Configuration $configuration,
-        private readonly ServerContract $server,
-        private readonly LanguageContract $language,
-        private readonly RequestContract $request,
-        private readonly ResponseContract $response,
-        public readonly ErrorContract $error,
+        private Configuration $configuration,
+        private ServerContract $server,
+        private LanguageContract $language,
+        private RequestContract $request,
+        private ResponseContract $response,
+        public ErrorContract $error,
         public ShutdownHandlerContract $handler,
-        private readonly bool $debug = false,
+        private bool $debug = false,
     ) {
     }
 

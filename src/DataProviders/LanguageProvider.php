@@ -11,7 +11,7 @@ use Treblle\Core\Support\PHP;
 final class LanguageProvider implements LanguageContract
 {
     public function __construct(
-        private readonly PHP $php,
+        private PHP $php,
     ) {
     }
 
