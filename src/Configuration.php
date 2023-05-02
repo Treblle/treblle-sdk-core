@@ -13,10 +13,10 @@ final class Configuration
      * @param array<int,string> $maskedFields
      */
     public function __construct(
-        public readonly string $apiKey,
-        public readonly string $projectId,
-        public readonly string $ignoredEnvironments,
-        public readonly array $maskedFields,
+        public string $apiKey,
+        public string $projectId,
+        public string $ignoredEnvironments,
+        public array $maskedFields,
     ) {
     }
 

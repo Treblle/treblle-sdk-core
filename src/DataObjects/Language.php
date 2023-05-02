@@ -18,10 +18,10 @@ final class Language implements TreblleObject
      * @param string|null $display_errors
      */
     public function __construct(
-        public readonly null|string $name,
-        public readonly null|string $version,
-        public readonly null|string $expose_php,
-        public readonly null|string $display_errors,
+        public null|string $name,
+        public null|string $version,
+        public null|string $expose_php,
+        public null|string $display_errors,
     ) {
     }
 

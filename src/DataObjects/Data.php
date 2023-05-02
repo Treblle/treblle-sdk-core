@@ -19,11 +19,11 @@ final class Data implements TreblleObject
      * @param list<Error> $errors The list of Errors.
      */
     public function __construct(
-        public readonly Server $server,
-        public readonly Language $language,
-        public readonly Request $request,
-        public readonly Response $response,
-        public readonly array $errors,
+        public Server $server,
+        public Language $language,
+        public Request $request,
+        public Response $response,
+        public array $errors,
     ) {
     }
 

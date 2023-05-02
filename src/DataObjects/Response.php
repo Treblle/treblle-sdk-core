@@ -33,7 +33,7 @@ final class Response implements TreblleObject
      *     code: null|int,
      *     size: null|int,
      *     load_time: null|float,
-     *     body: array,
+     *     body: string|array,
      * }
      */
     public function __toArray(): array

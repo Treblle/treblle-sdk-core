@@ -13,8 +13,8 @@ use Ramsey\Uuid\Uuid;
 final class TreblleRequestHandler implements RequestHandlerInterface
 {
     public function __construct(
-        private readonly MiddlewareInterface $middleware,
-        private readonly RequestHandlerInterface $next,
+        private MiddlewareInterface $middleware,
+        private RequestHandlerInterface $next,
     ) {}
 
     public function handle(ServerRequestInterface $request): ResponseInterface
