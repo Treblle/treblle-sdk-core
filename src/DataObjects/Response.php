@@ -16,14 +16,14 @@ final class Response implements TreblleObject
      * @param int|null $code The HTTP Status Code.
      * @param int|null $size The Response size in bytes.
      * @param float|null $load_time The load time of the Response in microseconds.
-     * @param array<int|string,mixed> $body The complete JSON respinse returned by the server.
+     * @param string|array<int|string,mixed> $body The complete JSON respinse returned by the server.
      */
     public function __construct(
         public readonly array $headers,
         public readonly null|int $code,
         public readonly null|int $size,
         public readonly null|float $load_time,
-        public readonly array $body,
+        public readonly string|array $body,
     ) {
     }
 
