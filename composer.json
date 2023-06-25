@@ -30,7 +30,7 @@
         "laravel/pint": "^1.6",
         "pestphp/pest": "^1.22.4",
         "phpstan/phpstan": "^1.10.3",
-        "psr/http-message": "^1.0",
+        "psr/http-message": "^1.0|^2.0",
         "psr/http-server-middleware": "^1.0",
         "symfony/http-kernel": "^6.2"
     },
